@@ -54,9 +54,17 @@ export const experiencesData = [
     title: "Application Developer (IT Officer I)",
     location: "Addis Ababa, Ethiopia",
     description:
-      "I am currently working as an Application Developer at Amhara Bank, where I have had the opportunity to contribute to the development, maintenance, and optimization of banking systems.",
+      "I worked as an Application Developer at Amhara Bank, where I have had the opportunity to contribute to the development, maintenance, and optimization of banking systems.",
     icon: React.createElement(CgWorkAlt),
-    date: "Nov. 2023 - present",
+    date: "Nov. 2023 - Dec. 2024",
+  },
+  {
+    title: "Junior Core Banking Officer",
+    location: "Addis Ababa, Ethiopia",
+    description:
+      "I am currently working as an Junior Core Banking Officer at Amhara Bank, where I have had the opportunity to contribute to the development, maintenance, and optimization of banking systems.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan. 2025 - present",
   },
 ] as const;
 
@@ -121,6 +129,8 @@ export const skillsData = [
   "React",
   "TypeScript",
   "Next.js",
+  "Django",
+  "Django REST Framework",
   "Tailwind",
   "Go",
   "Node.js",
