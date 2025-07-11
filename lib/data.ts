@@ -5,6 +5,7 @@ import chattingAppImg from "@/public/chatting_app.png";
 import publicNewsApp from "@/public/public_new_app.png";
 import foodRecipe from "@/public/food_recipe.png";
 import linkedinClone from "@/public/linkedin_clone.png";
+import Pneumonia from "@/public/pneumonia.png";
 
 export const links = [
   {
@@ -122,6 +123,13 @@ export const projectsData = [
       "A LinkedIn clone with a real-time, posts, and user authentication.",
     tags: ["React", "Next.js", "Tailwind", "Firebase", "Google OAuth"],
     imageUrl: linkedinClone,
+  },
+  {
+    title: "Pneumonia Prediction app",
+    description:
+      "Pneumonia Predictor is a mobile application built with Flutter that leverages TensorFlow to analyze medical images (e.g., X-rays) and provide rapid, AI-powered predictions for the likelihood of pneumonia.",
+    tags: ["Flutter", "TensorFlow"],
+    imageUrl: Pneumonia,
   },
 ] as const;
 
