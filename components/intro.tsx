@@ -57,7 +57,7 @@ export default function Intro() {
         <span className="font-bold">3 years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span> &{" "}
-        <span className="underline">Django (DRF)</span>.
+        <span className="underline">Golang</span>.
       </motion.h1>
 
       <motion.div
