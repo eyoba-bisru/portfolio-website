@@ -6,6 +6,7 @@ import publicNewsApp from "@/public/public_new_app.png";
 import foodRecipe from "@/public/food_recipe.png";
 import linkedinClone from "@/public/linkedin_clone.png";
 import Pneumonia from "@/public/pneumonia.png";
+import FaydaImg from "@/public/fayda.png";
 
 export const links = [
   {
@@ -70,6 +71,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Fayda Intergration For Amhara Bank",
+    description:
+      "I worked on integrating the Fayda payment system into Amhara Bank's core banking platform.",
+    tags: ["React.js", "Tailwind", "Express.js", "MongoDB", "Java"],
+    imageUrl: FaydaImg,
+  },
   {
     title: "Chatting App",
     description:
