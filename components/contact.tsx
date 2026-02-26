@@ -5,13 +5,8 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { BsLinkedin } from "react-icons/bs";
-import {
-  FaGithubSquare,
-  FaMailBulk,
-  FaMailchimp,
-  FaTelegram,
-  FaVoicemail,
-} from "react-icons/fa";
+import { FaGithubSquare, FaTelegram, FaPhone } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -36,39 +31,76 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at using the following addresses:{" "}
-      </p>
+      <div className="glass rounded-2xl p-8 hover-glow transition-shadow">
+        <p className="text-gray-600 dark:text-white/70 mb-2">
+          I'd love to hear from you! Reach out through any of the channels
+          below.
+        </p>
 
-      <div className="flex justify-center gap-4 mt-6">
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="mailto:eabebe@gmail.com"
-          target="_blank"
-        >
-          <FaMailBulk />
-        </a>
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://t.me/eyoba_bisru"
-          target="_blank"
-        >
-          <FaTelegram />
-        </a>
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/eyob-abebe-8327b71a1/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/eyoba-bisru"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <a
+            className="group flex items-center gap-3 glass rounded-xl px-5 py-3 hover-glow transition-all hover:scale-105 active:scale-100"
+            href="mailto:eabebe91@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Send Email"
+          >
+            <HiOutlineMail className="text-xl text-accent-violet dark:text-accent-cyan" />
+            <span className="text-sm font-medium text-gray-700 dark:text-white/80">
+              Email
+            </span>
+          </a>
+
+          <a
+            className="group flex items-center gap-3 glass rounded-xl px-5 py-3 hover-glow transition-all hover:scale-105 active:scale-100"
+            href="tel:+251964643164"
+            aria-label="Phone"
+          >
+            <FaPhone className="text-lg text-accent-violet dark:text-accent-cyan" />
+            <span className="text-sm font-medium text-gray-700 dark:text-white/80">
+              Phone
+            </span>
+          </a>
+
+          <a
+            className="group flex items-center gap-3 glass rounded-xl px-5 py-3 hover-glow transition-all hover:scale-105 active:scale-100"
+            href="https://t.me/eyoba_bisru"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+          >
+            <FaTelegram className="text-xl text-accent-violet dark:text-accent-cyan" />
+            <span className="text-sm font-medium text-gray-700 dark:text-white/80">
+              Telegram
+            </span>
+          </a>
+
+          <a
+            className="group flex items-center gap-3 glass rounded-xl px-5 py-3 hover-glow transition-all hover:scale-105 active:scale-100"
+            href="https://www.linkedin.com/in/eyob-abebe-8327b71a1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <BsLinkedin className="text-xl text-accent-violet dark:text-accent-cyan" />
+            <span className="text-sm font-medium text-gray-700 dark:text-white/80">
+              LinkedIn
+            </span>
+          </a>
+
+          <a
+            className="group flex items-center gap-3 glass rounded-xl px-5 py-3 hover-glow transition-all hover:scale-105 active:scale-100"
+            href="https://github.com/eyoba-bisru"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithubSquare className="text-xl text-accent-violet dark:text-accent-cyan" />
+            <span className="text-sm font-medium text-gray-700 dark:text-white/80">
+              GitHub
+            </span>
+          </a>
+        </div>
       </div>
     </motion.section>
   );

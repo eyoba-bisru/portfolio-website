@@ -6,15 +6,18 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTheme } from "@/context/theme-context";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white/20 bg-white/70 shadow-lg shadow-black/[0.03] backdrop-blur-[12px] sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full dark:bg-gray-950/70 dark:border-white/[0.08]"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -30,9 +33,9 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition-colors dark:text-gray-400 dark:hover:text-gray-200",
                   {
-                    "text-gray-950 dark:text-gray-200":
+                    "text-gray-950 dark:text-gray-100":
                       activeSection === link.name,
                   }
                 )}
@@ -46,7 +49,7 @@ export default function Header() {
 
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                    className="bg-gradient-to-r from-violet-100 to-cyan-100 rounded-full absolute inset-0 -z-10 dark:from-violet-900/40 dark:to-cyan-900/40"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
@@ -58,6 +61,25 @@ export default function Header() {
               </Link>
             </motion.li>
           ))}
+
+          {/* Theme toggle in navbar */}
+          <motion.li
+            className="h-3/4 flex items-center justify-center"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <button
+              className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ml-1"
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            >
+              {theme === "light" ? (
+                <BsSun className="text-accent-violet text-sm" />
+              ) : (
+                <BsMoon className="text-accent-cyan text-sm" />
+              )}
+            </button>
+          </motion.li>
         </ul>
       </nav>
     </header>

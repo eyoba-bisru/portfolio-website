@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -29,10 +28,12 @@ export default function Intro() {
               type: "tween",
               duration: 0.2,
             }}
-          ></motion.div>
+          >
+            <span className="text-6xl sm:text-7xl">💻</span>
+          </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute -bottom-1 -right-1 text-3xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -48,20 +49,31 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-6 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Eyob Abebe.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">3 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span> &{" "}
-        <span className="underline">Golang</span>.
+        <span className="font-bold gradient-text">
+          Hello, I'm Eyob Abebe Melese.
+        </span>{" "}
+        I'm a{" "}
+        <span className="font-bold">results-driven full-stack developer</span>{" "}
+        with <span className="font-bold">3+ years</span> of experience. I
+        deliver end-to-end solutions that are{" "}
+        <span className="italic">scalable, secure & maintainable</span>. My
+        focus is{" "}
+        <span className="underline decoration-accent-violet/50 underline-offset-4">
+          React (Next.js)
+        </span>{" "}
+        &{" "}
+        <span className="underline decoration-accent-cyan/50 underline-offset-4">
+          Go
+        </span>
+        .
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -70,7 +82,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gradient-to-r from-accent-violet to-accent-cyan text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition shadow-lg shadow-accent-violet/25 hover:shadow-accent-violet/40"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -81,13 +93,35 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 hover-glow dark:bg-white/10 dark:border-white/10"
           href="/Resume.pdf"
           download
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
+
+        <div className="flex gap-2">
+          <a
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-accent-violet active:scale-105 transition cursor-pointer border border-black/10 hover-glow dark:bg-white/10 dark:text-white/60 dark:border-white/10 dark:hover:text-accent-cyan"
+            href="https://www.linkedin.com/in/eyob-abebe-8327b71a1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+          >
+            <BsLinkedin />
+          </a>
+
+          <a
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-accent-violet active:scale-105 transition cursor-pointer border border-black/10 hover-glow dark:bg-white/10 dark:text-white/60 dark:border-white/10 dark:hover:text-accent-cyan"
+            href="https://github.com/eyoba-bisru"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   );

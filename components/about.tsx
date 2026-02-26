@@ -11,35 +11,81 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[45rem] scroll-mt-28 sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        Hello, I'm Eyob Abebe, a passionate Full-stack Developer based in Addis
-        Ababa, Ethiopia. I specialize in both front-end and back-end
-        development, using technologies such as React.js, Next.js, Tailwind CSS,
-        Django, DRF, Express.js, and Go to build dynamic and efficient web
-        applications. Currently, I am an Application Developer at Amhara Bank,
-        where I have had the opportunity to contribute to the development,
-        maintenance, and optimization of banking systems. My experience has
-        provided me with a solid understanding of the complexities involved in
-        building and managing large-scale applications. I hold a Bachelor's
-        degree in Software Engineering from Bahir Dar University, where I
-        graduated with a GPA of 3.93. I am a fast learner, detail-oriented, and
-        thrive in team-oriented environments where collaboration is key. I’m
-        passionate about continuously improving my skills and staying up-to-date
-        with the latest industry trends and technologies. I am eager to apply my
-        knowledge and passion for development to make a meaningful impact in the
-        tech world.
-        <br />
-        <br />
-        Feel free to connect with me or reach out for any opportunities or
-        collaborations!
-      </p>
+
+      <div className="glass rounded-2xl p-8 sm:p-10 hover-glow transition-shadow">
+        <p className="mb-4 leading-7 text-gray-700 dark:text-white/80">
+          I'm a results-driven fullstack developer with a passion for building
+          robust, efficient, and maintainable applications. From{" "}
+          <span className="font-medium text-accent-cyan dark:text-cyan-400">
+            backend APIs
+          </span>{" "}
+          to{" "}
+          <span className="font-medium text-accent-violet dark:text-violet-400">
+            modern frontends
+          </span>
+          , I deliver end-to-end solutions that are scalable, secure, and
+          aligned with real business goals.
+        </p>
+
+        <p className="mb-4 leading-7 text-gray-700 dark:text-white/80">
+          I specialize in{" "}
+          <span className="font-semibold">RESTful API development</span>,{" "}
+          <span className="font-semibold">microservices</span>,{" "}
+          <span className="font-semibold">
+            secure authentication (OAuth, JWT)
+          </span>
+          , and{" "}
+          <span className="font-semibold">containerized deployments</span>.
+          Whether launching a product or scaling infrastructure, I bring the
+          skills to drive real results.
+        </p>
+
+        <p className="leading-7 text-gray-700 dark:text-white/80">
+          Currently, I'm a{" "}
+          <span className="font-semibold">Junior Core Banking Officer</span> at{" "}
+          <span className="font-semibold">Amhara Bank S.C.</span>, developing
+          integrations using TAFJ, InfoBasic, and Java for the Temenos Transact
+          (T24) platform. I graduated in Software Engineering from{" "}
+          <span className="font-semibold">Bahir Dar University</span> with a
+          CGPA of{" "}
+          <span className="font-bold gradient-text">3.93</span>.
+        </p>
+
+        {/* Stats Strip */}
+        <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-black/5 dark:border-white/10">
+          <div className="text-center">
+            <div className="text-2xl sm:text-3xl font-bold gradient-text">
+              3+
+            </div>
+            <div className="text-sm text-gray-500 dark:text-white/50 mt-1">
+              Years Experience
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl sm:text-3xl font-bold gradient-text">
+              8+
+            </div>
+            <div className="text-sm text-gray-500 dark:text-white/50 mt-1">
+              Projects Built
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl sm:text-3xl font-bold gradient-text">
+              3.93
+            </div>
+            <div className="text-sm text-gray-500 dark:text-white/50 mt-1">
+              University CGPA
+            </div>
+          </div>
+        </div>
+      </div>
     </motion.section>
   );
 }
