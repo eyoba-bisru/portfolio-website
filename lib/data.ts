@@ -100,7 +100,7 @@ export const projectsData = [
       "A progressive web app for delivering timely and accurate news to the public.",
     tags: ["Next.js", "Express.js", "Prisma", "PostgreSQL", "Tailwind", "PWA"],
     imageUrl: publicNewsApp,
-    link: "https://github.com/eyoba-bisru/public-news-app",
+    link: "https://github.com/eyoba-bisru/public-news-frontend",
   },
   {
     title: "Chatting App",
@@ -108,7 +108,7 @@ export const projectsData = [
       "A real-time chat application with GraphQL subscriptions for seamless communication.",
     tags: ["Next.js", "GraphQL", "Apollo Server", "MongoDB"],
     imageUrl: chattingAppImg,
-    link: "https://github.com/eyoba-bisru/chatting-app",
+    link: "http://chatting-app-ui.vercel.app/",
   },
   {
     title: "LinkedIn Clone",
@@ -124,7 +124,7 @@ export const projectsData = [
       "A mobile app that analyzes chest X-rays using a CNN model to identify patterns indicative of pneumonia.",
     tags: ["Flutter", "TensorFlow", "TFLite", "CNN"],
     imageUrl: Pneumonia,
-    link: "https://github.com/eyoba-bisru/pneumonia-prediction",
+    link: "https://github.com/eyoba-bisru/pneumonia_prediction_app",
   },
   {
     title: "Go Auth",
@@ -132,7 +132,7 @@ export const projectsData = [
       "A reusable authentication service for Go applications built with the Chi framework.",
     tags: ["Go", "Chi", "Auth"],
     imageUrl: null,
-    link: "https://github.com/eyoba-bisru/go-auth",
+    link: "https://github.com/eyoba-bisru/go_auth",
   },
 ] as const;
 
