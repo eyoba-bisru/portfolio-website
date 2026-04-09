@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FiExternalLink, FiTerminal } from "react-icons/fi";
+import { FiExternalLink, FiTerminal, FiGithub } from "react-icons/fi";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -24,10 +24,11 @@ export default function Project({
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const hasImage = imageUrl !== null;
+  const isGithub = link?.includes("github.com");
 
   const cardContent = (
     <section
-      className={`glass rounded-2xl overflow-hidden relative group-hover:shadow-lg group-hover:shadow-accent-violet/10 transition-all duration-300 dark:group-hover:shadow-accent-cyan/10 ${hasImage ? "sm:pr-8 sm:h-[20rem] sm:group-even:pl-8" : ""
+      className={`glass rounded-2xl overflow-hidden relative group-hover:shadow-xl group-hover:shadow-accent-violet/10 transition-all duration-500 dark:group-hover:shadow-accent-cyan/10 gradient-border ${hasImage ? "sm:pr-8 sm:h-[20rem] sm:group-even:pl-8" : ""
         }`}
     >
       <div
@@ -38,13 +39,19 @@ export default function Project({
       >
         <div className="flex items-center gap-2">
           {!hasImage && (
-            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-accent-violet to-accent-cyan text-white mr-1">
+            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-accent-violet to-accent-cyan text-white mr-1 shadow-lg shadow-accent-violet/20">
               <FiTerminal className="text-lg" />
             </div>
           )}
-          <h3 className="text-2xl font-bold">{title}</h3>
+          <h3 className="text-2xl font-bold group-hover:gradient-text transition-all duration-300">{title}</h3>
           {link && (
-            <FiExternalLink className="text-accent-violet opacity-0 group-hover:opacity-100 transition-opacity dark:text-accent-cyan" />
+            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+              {isGithub ? (
+                <FiGithub className="text-accent-violet dark:text-accent-cyan" />
+              ) : (
+                <FiExternalLink className="text-accent-violet dark:text-accent-cyan" />
+              )}
+            </span>
           )}
         </div>
         <p className="mt-2 leading-relaxed text-gray-600 dark:text-white/70">
@@ -53,7 +60,7 @@ export default function Project({
         <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
           {tags.map((tag, index) => (
             <li
-              className="bg-gradient-to-r from-accent-violet/80 to-accent-cyan/80 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
+              className="tag-pill bg-gradient-to-r from-accent-violet/80 to-accent-cyan/80 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full font-medium"
               key={index}
             >
               {tag}
@@ -68,7 +75,7 @@ export default function Project({
           alt={`Screenshot of ${title} project`}
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-          transition 
+          transition-all duration-500
           group-hover:scale-[1.04]
           group-hover:-translate-x-3
           group-hover:translate-y-3
@@ -82,9 +89,9 @@ export default function Project({
         />
       )}
 
-      {/* Hover overlay for clickable projects */}
+      {/* Hover gradient overlay */}
       {link && (
-        <div className="absolute inset-0 bg-gradient-to-r from-accent-violet/5 to-accent-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-violet/5 to-accent-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
       )}
     </section>
   );

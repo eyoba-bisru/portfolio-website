@@ -62,13 +62,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${outfit.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${outfit.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#0a0a1a] dark:text-gray-50 dark:text-opacity-90 noise-overlay`}
       >
-        {/* Animated background blobs */}
+        {/* Animated background blobs — larger, more dynamic, better colors */}
         <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
-          <div className="absolute top-[-6rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full bg-violet-200 opacity-40 blur-[8rem] animate-blob dark:bg-violet-900/40"></div>
-          <div className="absolute top-[20rem] left-[-10rem] h-[31.25rem] w-[50rem] rounded-full bg-cyan-200 opacity-30 blur-[8rem] animate-blob animation-delay-2000 dark:bg-cyan-900/30"></div>
-          <div className="absolute bottom-[-10rem] right-[-5rem] h-[25rem] w-[25rem] rounded-full bg-fuchsia-200 opacity-30 blur-[8rem] animate-blob animation-delay-4000 dark:bg-fuchsia-900/30"></div>
+          <div className="absolute top-[-6rem] right-[11rem] h-[35rem] w-[35rem] rounded-full bg-violet-200 opacity-30 blur-[8rem] animate-blob dark:bg-violet-900/30"></div>
+          <div className="absolute top-[20rem] left-[-10rem] h-[35rem] w-[50rem] rounded-full bg-cyan-200 opacity-25 blur-[8rem] animate-blob animation-delay-2000 dark:bg-cyan-900/20"></div>
+          <div className="absolute bottom-[-10rem] right-[-5rem] h-[30rem] w-[30rem] rounded-full bg-fuchsia-200 opacity-25 blur-[8rem] animate-blob animation-delay-4000 dark:bg-fuchsia-900/20"></div>
+          {/* Extra accent blob for depth */}
+          <div className="absolute top-[40%] left-[50%] h-[20rem] w-[20rem] rounded-full bg-pink-200 opacity-20 blur-[10rem] animate-blob animation-delay-2000 dark:bg-pink-900/15"></div>
         </div>
 
         <ThemeContextProvider>
