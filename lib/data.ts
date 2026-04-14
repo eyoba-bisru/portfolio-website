@@ -3,6 +3,7 @@ import publicNewsApp from "@/public/public_new_app.png";
 import linkedinClone from "@/public/linkedin_clone.png";
 import Pneumonia from "@/public/pneumonia.png";
 import FaydaImg from "@/public/fayda.png";
+import habeshaChinetImg from "@/public/habesha_chinet.png";
 import type { SkillCategory, ProjectCategory } from "./types";
 
 export const links = [
@@ -78,48 +79,12 @@ export const projectsData = [
     category: "fullstack" as ProjectCategory,
   },
   {
-    title: "Blogly — Blog Backend",
+    title: "Habesha Chinet (Web & Mobile Apps)",
     description:
-      "A full-featured blog backend service built with Go, featuring authentication, GORM ORM, and containerized deployment.",
-    tags: ["Go", "Gin", "GORM", "Docker", "PostgreSQL", "Auth"],
-    imageUrl: null,
-    link: "https://github.com/eyoba-bisru/blogly",
-    category: "backend" as ProjectCategory,
-  },
-  {
-    title: "URL Shortener",
-    description:
-      "A URL shortener that converts long, complex web addresses into shorter, more manageable links with Redis caching.",
-    tags: ["Go", "Gin", "PostgreSQL", "Redis", "GORM", "Docker", "Auth"],
-    imageUrl: null,
-    link: "https://github.com/eyoba-bisru/url_shortener",
-    category: "backend" as ProjectCategory,
-  },
-  {
-    title: "Public News App",
-    description:
-      "A progressive web app for delivering timely and accurate news to the public.",
-    tags: ["Next.js", "Express.js", "Prisma", "PostgreSQL", "Tailwind", "PWA"],
-    imageUrl: publicNewsApp,
-    link: "https://github.com/eyoba-bisru/public-news-frontend",
-    category: "fullstack" as ProjectCategory,
-  },
-  {
-    title: "Chatting App",
-    description:
-      "A real-time chat application with GraphQL subscriptions for seamless communication.",
-    tags: ["Next.js", "GraphQL", "Apollo Server", "MongoDB"],
-    imageUrl: chattingAppImg,
-    link: "http://chatting-app-ui.vercel.app/",
-    category: "fullstack" as ProjectCategory,
-  },
-  {
-    title: "LinkedIn Clone",
-    description:
-      "A LinkedIn clone with real-time posts and Google OAuth user authentication.",
-    tags: ["Next.js", "Tailwind", "Firebase", "Google OAuth"],
-    imageUrl: linkedinClone,
-    link: "https://github.com/eyoba-bisru/linkedin-clone",
+      "Ethiopia's premier freight platform. I built the complete ecosystem including the web landing page and the dedicated mobile applications for both Customers and Drivers.",
+    tags: ["React.js", "Flutter", "TypeScript", "Tailwind CSS", "Mobile Apps"],
+    imageUrl: habeshaChinetImg,
+    link: "https://habeshachinet.com/",
     category: "fullstack" as ProjectCategory,
   },
   {
@@ -132,6 +97,42 @@ export const projectsData = [
     category: "mobile" as ProjectCategory,
   },
   {
+    title: "URL Shortener",
+    description:
+      "A URL shortener that converts long, complex web addresses into shorter, more manageable links with Redis caching.",
+    tags: ["Go", "Gin", "PostgreSQL", "Redis", "GORM", "Docker", "Auth"],
+    imageUrl: null,
+    link: "https://github.com/eyoba-bisru/url_shortener",
+    category: "backend" as ProjectCategory,
+  },
+  {
+    title: "Blogly — Blog Backend",
+    description:
+      "A full-featured blog backend service built with Go, featuring authentication, GORM ORM, and containerized deployment.",
+    tags: ["Go", "Gin", "GORM", "Docker", "PostgreSQL", "Auth"],
+    imageUrl: null,
+    link: "https://github.com/eyoba-bisru/blogly",
+    category: "backend" as ProjectCategory,
+  },
+  {
+    title: "Chatting App",
+    description:
+      "A real-time chat application with GraphQL subscriptions for seamless communication.",
+    tags: ["Next.js", "GraphQL", "Apollo Server", "MongoDB"],
+    imageUrl: chattingAppImg,
+    link: "http://chatting-app-ui.vercel.app/",
+    category: "fullstack" as ProjectCategory,
+  },
+  {
+    title: "Public News App",
+    description:
+      "A progressive web app for delivering timely and accurate news to the public.",
+    tags: ["Next.js", "Express.js", "Prisma", "PostgreSQL", "Tailwind", "PWA"],
+    imageUrl: publicNewsApp,
+    link: "https://github.com/eyoba-bisru/public-news-frontend",
+    category: "fullstack" as ProjectCategory,
+  },
+  {
     title: "Go Auth",
     description:
       "A reusable authentication service for Go applications built with the Chi framework.",
@@ -139,6 +140,15 @@ export const projectsData = [
     imageUrl: null,
     link: "https://github.com/eyoba-bisru/go_auth",
     category: "backend" as ProjectCategory,
+  },
+  {
+    title: "LinkedIn Clone",
+    description:
+      "A LinkedIn clone with real-time posts and Google OAuth user authentication.",
+    tags: ["Next.js", "Tailwind", "Firebase", "Google OAuth"],
+    imageUrl: linkedinClone,
+    link: "https://github.com/eyoba-bisru/linkedin-clone",
+    category: "fullstack" as ProjectCategory,
   },
 ] as const;
 
