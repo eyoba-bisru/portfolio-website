@@ -8,19 +8,25 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Outfit", "sans-serif"],
+        sans: ["Outfit", "Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "Fira Code", "monospace"],
       },
       colors: {
         accent: {
           violet: "#7c3aed",
           cyan: "#06b6d4",
           pink: "#ec4899",
+          emerald: "#10b981",
+        },
+        navy: {
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          800: "#1e1b4b",
+          900: "#0f0e2a",
+          950: "#0a0a1a",
         },
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-primary": "linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%)",
         "gradient-warm": "linear-gradient(135deg, #7c3aed 0%, #ec4899 50%, #06b6d4 100%)",
       },
@@ -30,7 +36,9 @@ module.exports = {
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "gradient-flow": "gradient-flow 3s ease infinite",
         shimmer: "shimmer 3s linear infinite",
-        "slide-up": "slideUp 0.6s ease-out forwards",
+        orbit: "orbit 3s linear infinite",
+        "cursor-blink": "cursor-blink 1s step-end infinite",
+        "status-pulse": "status-pulse 2s ease-in-out infinite",
       },
       keyframes: {
         blob: {
@@ -41,14 +49,14 @@ module.exports = {
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-12px)" },
         },
         "pulse-glow": {
           "0%, 100%": {
-            boxShadow: "0 0 20px rgba(124, 58, 237, 0.2), 0 0 40px rgba(6, 182, 212, 0.1)",
+            boxShadow: "0 0 20px rgba(124,58,237,0.15), 0 0 40px rgba(6,182,212,0.1)",
           },
           "50%": {
-            boxShadow: "0 0 30px rgba(124, 58, 237, 0.35), 0 0 60px rgba(6, 182, 212, 0.2)",
+            boxShadow: "0 0 35px rgba(124,58,237,0.3), 0 0 70px rgba(6,182,212,0.2)",
           },
         },
         "gradient-flow": {
@@ -60,9 +68,17 @@ module.exports = {
           "0%": { backgroundPosition: "-200% center" },
           "100%": { backgroundPosition: "200% center" },
         },
-        slideUp: {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
+        orbit: {
+          "0%": { transform: "rotate(0deg) translateX(4px) rotate(0deg)" },
+          "100%": { transform: "rotate(360deg) translateX(4px) rotate(-360deg)" },
+        },
+        "cursor-blink": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+        "status-pulse": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.5", transform: "scale(1.5)" },
         },
       },
     },

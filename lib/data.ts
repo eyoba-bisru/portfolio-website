@@ -1,11 +1,9 @@
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap } from "react-icons/lu";
 import chattingAppImg from "@/public/chatting_app.png";
 import publicNewsApp from "@/public/public_new_app.png";
 import linkedinClone from "@/public/linkedin_clone.png";
 import Pneumonia from "@/public/pneumonia.png";
 import FaydaImg from "@/public/fayda.png";
+import type { SkillCategory, ProjectCategory } from "./types";
 
 export const links = [
   {
@@ -40,7 +38,7 @@ export const experiencesData = [
     location: "Bahir Dar, Ethiopia",
     description:
       "Graduated with a Bachelor's degree in Software Engineering from Bahir Dar University with a CGPA of 3.93.",
-    icon: React.createElement(LuGraduationCap),
+    type: "education" as const,
     date: "Oct. 2018 - Jul. 2023",
   },
   {
@@ -48,7 +46,7 @@ export const experiencesData = [
     location: "Gondar, Ethiopia",
     description:
       "Worked as an intern at Gondar University, gaining hands-on experience with web development fundamentals and collaborative software projects.",
-    icon: React.createElement(CgWorkAlt),
+    type: "work" as const,
     date: "Jun. 2022 - Sep. 2022",
   },
   {
@@ -56,7 +54,7 @@ export const experiencesData = [
     location: "Amhara Bank S.C. — Addis Ababa, Ethiopia",
     description:
       "Developed ABa RTGS limit system for limiting RTGS transactions. Built an automated ATM working amount checker with automated notifications. Collaborated with a team of 5 developers on major projects. Managed SQL queries and database operations. Authored technical and functional specifications for T24 solutions.",
-    icon: React.createElement(CgWorkAlt),
+    type: "work" as const,
     date: "Nov. 2023 - Dec. 2024",
   },
   {
@@ -64,7 +62,7 @@ export const experiencesData = [
     location: "Amhara Bank S.C. — Addis Ababa, Ethiopia",
     description:
       "Developing local routines and integrations using TAFJ, InfoBasic, and Java. Designing custom configurations for the Temenos Transact (T24) platform. Building bespoke applications to align core banking systems with institutional needs.",
-    icon: React.createElement(CgWorkAlt),
+    type: "work" as const,
     date: "Jan. 2025 - Present",
   },
 ] as const;
@@ -77,6 +75,7 @@ export const projectsData = [
     tags: ["React.js", "Express.js", "Docker Compose", "MongoDB", "Java"],
     imageUrl: FaydaImg,
     link: "http://fayda.amharabank.com.et/",
+    category: "fullstack" as ProjectCategory,
   },
   {
     title: "Blogly — Blog Backend",
@@ -85,6 +84,7 @@ export const projectsData = [
     tags: ["Go", "Gin", "GORM", "Docker", "PostgreSQL", "Auth"],
     imageUrl: null,
     link: "https://github.com/eyoba-bisru/blogly",
+    category: "backend" as ProjectCategory,
   },
   {
     title: "URL Shortener",
@@ -93,6 +93,7 @@ export const projectsData = [
     tags: ["Go", "Gin", "PostgreSQL", "Redis", "GORM", "Docker", "Auth"],
     imageUrl: null,
     link: "https://github.com/eyoba-bisru/url_shortener",
+    category: "backend" as ProjectCategory,
   },
   {
     title: "Public News App",
@@ -101,6 +102,7 @@ export const projectsData = [
     tags: ["Next.js", "Express.js", "Prisma", "PostgreSQL", "Tailwind", "PWA"],
     imageUrl: publicNewsApp,
     link: "https://github.com/eyoba-bisru/public-news-frontend",
+    category: "fullstack" as ProjectCategory,
   },
   {
     title: "Chatting App",
@@ -109,6 +111,7 @@ export const projectsData = [
     tags: ["Next.js", "GraphQL", "Apollo Server", "MongoDB"],
     imageUrl: chattingAppImg,
     link: "http://chatting-app-ui.vercel.app/",
+    category: "fullstack" as ProjectCategory,
   },
   {
     title: "LinkedIn Clone",
@@ -117,6 +120,7 @@ export const projectsData = [
     tags: ["Next.js", "Tailwind", "Firebase", "Google OAuth"],
     imageUrl: linkedinClone,
     link: "https://github.com/eyoba-bisru/linkedin-clone",
+    category: "fullstack" as ProjectCategory,
   },
   {
     title: "Pneumonia Prediction App",
@@ -125,6 +129,7 @@ export const projectsData = [
     tags: ["Flutter", "TensorFlow", "TFLite", "CNN"],
     imageUrl: Pneumonia,
     link: "https://github.com/eyoba-bisru/pneumonia_prediction_app",
+    category: "mobile" as ProjectCategory,
   },
   {
     title: "Go Auth",
@@ -133,8 +138,52 @@ export const projectsData = [
     tags: ["Go", "Chi", "Auth"],
     imageUrl: null,
     link: "https://github.com/eyoba-bisru/go_auth",
+    category: "backend" as ProjectCategory,
   },
 ] as const;
+
+export const skillCategories: SkillCategory[] = [
+  {
+    name: "Frontend",
+    emoji: "🎨",
+    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Flutter"],
+  },
+  {
+    name: "Backend",
+    emoji: "⚙️",
+    skills: [
+      "Go",
+      "Gin Framework",
+      "Django",
+      "Django REST Framework",
+      "Node.js",
+      "Express.js",
+      "Python",
+    ],
+  },
+  {
+    name: "Database",
+    emoji: "🗄️",
+    skills: ["PostgreSQL", "MongoDB", "Prisma"],
+  },
+  {
+    name: "DevOps & Tools",
+    emoji: "🚀",
+    skills: [
+      "Docker",
+      "Docker Compose",
+      "Git",
+      "GitHub",
+      "Linux / Ubuntu",
+      "RHEL",
+    ],
+  },
+  {
+    name: "APIs & Protocols",
+    emoji: "🔗",
+    skills: ["REST API", "GraphQL"],
+  },
+];
 
 export const skillsData = [
   "React.js",

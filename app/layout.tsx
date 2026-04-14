@@ -1,17 +1,21 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Outfit } from "next/font/google";
+import { Outfit, JetBrains_Mono } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 
-const outfit = Outfit({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Eyob Abebe Melese | Full-Stack Software Engineer — React, Next.js, Go",
+  title:
+    "Eyob Abebe Melese | Full-Stack Software Engineer — React, Next.js, Go",
   description:
     "Eyob Abebe Melese is a results-driven full-stack software engineer based in Addis Ababa, Ethiopia with 3+ years of experience building scalable web applications using React, Next.js, Go, Django, and Docker.",
   keywords: [
@@ -62,15 +66,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${outfit.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#0a0a1a] dark:text-gray-50 dark:text-opacity-90 noise-overlay`}
+        className={`${outfit.variable} ${jetbrainsMono.variable} font-sans bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-navy-950 dark:text-gray-50 dark:text-opacity-90 noise-overlay dot-grid`}
       >
-        {/* Animated background blobs — larger, more dynamic, better colors */}
-        <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
-          <div className="absolute top-[-6rem] right-[11rem] h-[35rem] w-[35rem] rounded-full bg-violet-200 opacity-30 blur-[8rem] animate-blob dark:bg-violet-900/30"></div>
-          <div className="absolute top-[20rem] left-[-10rem] h-[35rem] w-[50rem] rounded-full bg-cyan-200 opacity-25 blur-[8rem] animate-blob animation-delay-2000 dark:bg-cyan-900/20"></div>
-          <div className="absolute bottom-[-10rem] right-[-5rem] h-[30rem] w-[30rem] rounded-full bg-fuchsia-200 opacity-25 blur-[8rem] animate-blob animation-delay-4000 dark:bg-fuchsia-900/20"></div>
-          {/* Extra accent blob for depth */}
-          <div className="absolute top-[40%] left-[50%] h-[20rem] w-[20rem] rounded-full bg-pink-200 opacity-20 blur-[10rem] animate-blob animation-delay-2000 dark:bg-pink-900/15"></div>
+        {/* Animated gradient orbs */}
+        <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+          <div className="absolute top-[-8rem] right-[8rem] h-[40rem] w-[40rem] rounded-full bg-violet-200 opacity-25 blur-[10rem] animate-blob dark:bg-violet-900/20"></div>
+          <div className="absolute top-[22rem] left-[-12rem] h-[40rem] w-[55rem] rounded-full bg-cyan-200 opacity-20 blur-[10rem] animate-blob animation-delay-2000 dark:bg-cyan-900/15"></div>
+          <div className="absolute bottom-[-12rem] right-[-8rem] h-[35rem] w-[35rem] rounded-full bg-fuchsia-200 opacity-20 blur-[10rem] animate-blob animation-delay-4000 dark:bg-fuchsia-900/15"></div>
+          <div className="absolute top-[45%] left-[40%] h-[25rem] w-[25rem] rounded-full bg-emerald-200 opacity-10 blur-[12rem] animate-blob animation-delay-2000 dark:bg-emerald-900/10"></div>
         </div>
 
         <ThemeContextProvider>
@@ -78,7 +81,6 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-
             <Toaster position="top-right" />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
