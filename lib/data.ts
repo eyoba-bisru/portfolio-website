@@ -81,8 +81,8 @@ export const projectsData = [
   {
     title: "Habesha Chinet (Web & Mobile Apps)",
     description:
-      "Ethiopia's premier freight platform. I built the complete ecosystem including the web landing page and the dedicated mobile applications for both Customers and Drivers.",
-    tags: ["React.js", "Flutter", "TypeScript", "Tailwind CSS", "Mobile Apps"],
+      "Ethiopia's premier freight platform. I built the complete ecosystem including the web landing page, the admin panel web application, and the dedicated mobile applications for both Customers and Drivers. I also built the backend.",
+    tags: ["React.js", "Flutter", "TypeScript", "Tailwind CSS", "Django REST Framework", "Mobile Apps"],
     imageUrl: habeshaChinetImg,
     link: "https://habeshachinet.com/",
     category: "fullstack" as ProjectCategory,
