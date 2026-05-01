@@ -4,6 +4,7 @@ import linkedinClone from "@/public/linkedin_clone.png";
 import Pneumonia from "@/public/pneumonia.png";
 import FaydaImg from "@/public/fayda.png";
 import habeshaChinetImg from "@/public/habesha_chinet.png";
+import overtimeMsImg from "@/public/overtime_ms.png";
 import type { SkillCategory, ProjectCategory } from "./types";
 
 export const links = [
@@ -85,6 +86,15 @@ export const projectsData = [
     tags: ["React.js", "Flutter", "TypeScript", "Tailwind CSS", "Django REST Framework", "Mobile Apps"],
     imageUrl: habeshaChinetImg,
     link: "https://habeshachinet.com/",
+    category: "fullstack" as ProjectCategory,
+  },
+  {
+    title: "Overtime Management System",
+    description:
+      "A full-stack enterprise overtime tracking and approval system with role-based access control, department management, audit logging, and automated workflows for finance and admin teams.",
+    tags: ["React.js", "TypeScript", "Go", "Gin", "PostgreSQL", "JWT Auth", "Docker"],
+    imageUrl: overtimeMsImg,
+    link: "https://github.com/eyoba-bisru/overtime-ms",
     category: "fullstack" as ProjectCategory,
   },
   {

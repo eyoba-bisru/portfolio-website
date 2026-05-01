@@ -20,7 +20,7 @@ const codeLines = [
   { text: 'const developer = {', color: '#cba6f7' },
   { text: '  name: "Eyob Abebe",', color: '#a6e3a1' },
   { text: '  role: "Full-Stack Engineer",', color: '#a6e3a1' },
-  { text: '  stack: ["React", "Next.js", "Go"],', color: '#89b4fa' },
+  { text: '  stack: ["React", "Go", "Django", "Express"],', color: '#89b4fa' },
   { text: '  passion: "Building scalable apps",', color: '#a6e3a1' },
   { text: '  available: true,', color: '#fab387' },
   { text: '};', color: '#cba6f7' },
@@ -122,7 +122,7 @@ export default function Intro() {
             </span>{" "}
             of experience building scalable, secure & maintainable solutions with{" "}
             <span className="font-semibold text-accent-violet dark:text-accent-cyan">
-              React, Next.js & Go
+              React, Next.js, Go, Django & Express.js
             </span>
             .
           </motion.p>

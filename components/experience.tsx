@@ -20,7 +20,7 @@ export default function Experience() {
         {/* Timeline line */}
         <div className="absolute left-[0.5625rem] top-2 bottom-2 w-[2px] bg-gradient-to-b from-accent-violet via-accent-cyan to-accent-violet/20 rounded-full"></div>
 
-        {experiencesData.map((item, index) => (
+        {experiencesData.toReversed().map((item, index) => (
           <motion.div
             key={index}
             className="relative mb-10 last:mb-0"
