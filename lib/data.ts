@@ -70,7 +70,7 @@ export const projectsData = [
   {
     title: "Fayda Integration for Amhara Bank",
     description:
-      "Integration system for linking all Amhara Bank accounts to the Fayda National ID.",
+      "Designed and implemented a secure integration platform connecting Amhara Bank accounts to the Fayda National ID system.",
     tags: ["React.js", "Express.js", "Docker Compose", "MongoDB", "Java"],
     imageUrl: FaydaImg,
     link: "http://fayda.amharabank.com.et/",
@@ -79,7 +79,7 @@ export const projectsData = [
   {
     title: "Habesha Chinet (Web & Mobile Apps)",
     description:
-      "Ethiopia's premier freight platform. I built the complete ecosystem including the web landing page, the admin panel web application, and the dedicated mobile applications for both Customers and Drivers. I also built the backend.",
+      "Built a complete freight service ecosystem with web, admin, and mobile apps for customers and drivers, backed by a full-stack backend.",
     tags: [
       "React.js",
       "Flutter",
@@ -95,7 +95,7 @@ export const projectsData = [
   {
     title: "Pneumonia Prediction App",
     description:
-      "A mobile app that analyzes chest X-rays using a CNN model to identify patterns indicative of pneumonia.",
+      "Delivered a mobile diagnostic tool that classifies chest X-rays with an on-device CNN model for fast pneumonia detection.",
     tags: ["Flutter", "TensorFlow", "TFLite", "CNN"],
     imageUrl: Pneumonia,
     link: "https://github.com/eyoba-bisru/pneumonia_prediction_app",
@@ -104,7 +104,7 @@ export const projectsData = [
   {
     title: "Overtime Management System",
     description:
-      "A full-stack enterprise overtime tracking and approval system with role-based access control, department management, audit logging, and automated workflows for finance and admin teams.",
+      "Created an enterprise overtime management solution with approvals, audit logging, and automated workflows for finance and HR teams.",
     tags: [
       "React.js",
       "TypeScript",
