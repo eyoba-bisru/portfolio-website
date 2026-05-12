@@ -42,6 +42,7 @@ export default function Project({
                 src={imageUrl}
                 alt={`Screenshot of ${title}`}
                 fill
+                loading={index < 3 ? "eager" : "lazy"}
                 className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
                 quality={90}
                 sizes="(max-width: 768px) 100vw, 50vw"
